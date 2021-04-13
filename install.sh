@@ -44,7 +44,10 @@ sudo tailscale up
 
 #or tailscale up --advertise-exit-node # to use as an exit node to internet from other pears of the private network
 
-source: https://tailscale.com/download/linux/debian-bullseye
+source: 
+https://tailscale.com/download/linux/debian-bullseye
+https://tailscale.com/kb/1103/exit-nodes
+https://tailscale.com/kb/1104/enable-ip-forwarding
 
 Check the page https://login.tailscale.com/admin/machines to view your VPN network.
 
