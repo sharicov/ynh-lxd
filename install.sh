@@ -59,13 +59,23 @@ In nextcloud settings add smb external storages with proper sharename and samba 
 
 Optional:
 
+dmesg -wH
+
 lxc stop vas
 lxc delete vas
 lxc list --columns ns4 #show internal ip
+
+show size of containers:
+lxc storage list
+lxc storage info default
+source: https://discuss.linuxcontainers.org/t/how-to-check-lxd-container-size-and-how-much-space-they-are-tacking/4770/3
+
 On HOST machine
 mount /dev/sda2 /media/usb1
 mount /dev/sdb1 /media/usb2
 # not needed, just in case# systemctl restart smbd
+
+Migrating container to another machine: https://www.cyberciti.biz/faq/how-to-movemigrate-lxd-vm-to-another-host-on-linux/
 
 lxc launch ubuntu:20.04 vas
 
