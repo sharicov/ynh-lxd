@@ -201,4 +201,9 @@ apt install fdupes
 fdupes -rd /media/usb1/
 type help to get a manual
 
+Emby:
+run on r4s host (not container)
+lxc config device add ynh myport8096 proxy listen=tcp:0.0.0.0:8096 connect=tcp:127.0.0.1:8096
+lxc config device add ynh myport8920 proxy listen=tcp:0.0.0.0:8920 connect=tcp:127.0.0.1:8920
+lxc config device add ynh vartest disk source=/media/usb1/Movies path=/media
 
